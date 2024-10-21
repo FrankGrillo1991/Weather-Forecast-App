@@ -39,3 +39,12 @@ function updateWeatherUI(weatherData) {
     weatherResultDiv.innerHTML = weatherCard;
 }
 
+document.getElementById('search-btn').addEventListener('click', () => {
+    const cityInput = document.getElementById('city-input').value.trim();
+    const countryInput = document.getElementById('country-input').value.trim().toLowerCase();
+    if (cityInput && countryInput) {
+        fetchWeather(cityInput, countryInput);
+    } else {
+        alert('Please enter both city and country code.');
+    }
+});
