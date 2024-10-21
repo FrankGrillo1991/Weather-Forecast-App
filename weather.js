@@ -18,3 +18,24 @@ async function fetchWeather(city, country) {
         alert(error.message);
     }
 }
+
+function updateWeatherUI(weatherData) {
+    const weatherResultDiv = document.getElementById('weather-result');
+    // Clear previous results
+    weatherResultDiv.innerHTML = '';
+    // Bootstrap card for weather data
+    const weatherCard = `
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">${weatherData.name}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">${weatherData.weather[0].main}</h6>
+            <p class="card-text">Temperature: ${weatherData.main.temp}C</p>
+            <p class="card-text">Feels like: ${weatherData.main.feels_like}C</p>
+            <p class="card-text">Wind speed: ${weatherData.wind.speed} m/s</p>
+            <p class="card-text">Humidity: ${weatherData.main.humidity}%</p>
+        </div>
+    </div>
+    `;
+    weatherResultDiv.innerHTML = weatherCard;
+}
+
