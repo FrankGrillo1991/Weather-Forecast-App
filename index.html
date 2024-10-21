@@ -15,8 +15,18 @@
                 <div class="col-md-6">
                     <!-- Input group for city and country -->
                      <div class="input-group mb-3">
-
+                        <input type="text" id="city-input" class="form-control" placeholder="City" aria-label="City">
+                        <input type="text" id="country-input" class="form-control" placeholder="Country Code (e.g, UK)" aria-label="Country Code">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" id="search-btn">Get Forecast</button>
+                        </div>
                      </div>
+
+                     <!-- Weather display area -->
+                      <div id="weather-result" class="text-center">
+
+                        <!-- Weather information will be displayed here -->
+                      </div>
                 </div>
             </div>
         </div>
