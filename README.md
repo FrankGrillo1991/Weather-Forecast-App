@@ -1,0 +1,1 @@
+Weather Forecast App developed with HTML, CSS & JavaScript
